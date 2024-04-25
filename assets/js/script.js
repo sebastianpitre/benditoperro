@@ -35,12 +35,12 @@ function crearProductos() {
                 <h5 class="mt-4">${producto.nombre}</h5>
                 <p>$${producto.precio}</p>
                 <div class="agregar">
-                    <button onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">Agregar al carrito</button>
+                    <button class="btn btn-sm btn-warning" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">Agregar al carrito</button>
                 </div>
                 <div class="botones" style="display: none;">
-                    <button onclick="disminuirCantidad('${producto.nombre}')">-</button>
-                    <span><span id="cantidad-producto-${index}">0</span></span>
-                    <button onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">+</button>
+                    <button class="btn btn-sm btn-warning" onclick="disminuirCantidad('${producto.nombre}')">-</button>
+                    <span id="cantidad-producto-${index}">0</span>
+                    <button class="btn btn-sm btn-warning" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">+</button>
                     
                     
                 </div>
@@ -138,10 +138,11 @@ function mostrarCarrito() {
     carrito.forEach(producto => {
         const productoDiv = document.createElement('div');
         productoDiv.innerHTML = `
-            <p class="text-white mt-1 mb-n1">${producto.nombre} - $${producto.precio} x ${producto.cantidad}</p>
+            <div class="border border-bottom border-dark"></div>
+            <p class="text-dark mt-1 mb-n1">${producto.nombre} - $${producto.precio} x ${producto.cantidad}</p>
             
-            <button class="btn btn-sm bg-gray-100" onclick="disminuirCantidad('${producto.nombre}')">-</button>
-            <button class="btn btn-sm btn-info" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">+</button>
+            <button class="btn btn-sm bg-dark" onclick="disminuirCantidad('${producto.nombre}')">-</button>
+            <button class="btn btn-sm btn-warning" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">+</button>
             <button class="btn btn-sm btn-danger" onclick="quitarProducto('${producto.nombre}')">Quitar</button>
         `;
         carritoDiv.appendChild(productoDiv);
