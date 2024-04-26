@@ -190,11 +190,14 @@ function mostrarCarrito() {
         // Crea un div para mostrar el producto en el carrito
         const productoDiv = document.createElement('div');
         productoDiv.innerHTML = `
-            <div class="border border-bottom border-dark"></div>
-            <p class="text-dark mt-1 mb-n1">${producto.nombre} - $${producto.precio} x ${producto.cantidad} = $${subtotal.toFixed(2)}</p>
+            <div class="border border-bottom border-warning"></div>
+            <p class="text-dark mt-1">${producto.nombre} - $${producto.precio}  </p><p class="text-end mt-n4">x ${producto.cantidad}</p><p class="text-end mt-n3 mb-n4">$ ${subtotal.toFixed(2)} </p>
             <button class="btn btn-sm bg-dark" onclick="disminuirCantidad('${producto.nombre}')">-</button>
             <button class="btn btn-sm btn-warning" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">+</button>
-            <button class="btn btn-sm btn-danger" onclick="quitarProducto('${producto.nombre}')">Quitar</button>
+            <button class="btn btn-sm btn-danger" onclick="quitarProducto('${producto.nombre}')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+          </svg></button>
         `;
         carritoDiv.appendChild(productoDiv);
     });
@@ -202,8 +205,8 @@ function mostrarCarrito() {
     // Muestra el total de todos los productos en el carrito
     const totalDiv = document.createElement('div');
     totalDiv.innerHTML = `
-        <div class="border border-bottom border-dark"></div>
-        <p class="text-dark mt-1 mb-n1">Total: $${total.toFixed(2)}</p>
+        <div class="border border-bottom border-warning"></div>
+        <p class="text-dark text-end mt-1 mb-n1">Total: $${total.toFixed(2)}</p>
     `;
     carritoDiv.appendChild(totalDiv);
 }
