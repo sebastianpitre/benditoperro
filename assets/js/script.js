@@ -1,57 +1,82 @@
 // Array para almacenar los productos en el carrito
 let carrito = [];
 
-// Lista de productos disponibles (nombre, precio e imagen)
+// Lista de productos disponibles (nombre, precio, imagen, categoría)
 const productos = [
     {
-        nombre: 'Computador',
-        precio: 20,
-        imagen: 'assets/img/computer.jpg'
+        nombre: 'EL GOLIAT',
+        precio: 25000,
+        imagen: 'assets/img/product/perro1.jpg'
     },
     {
-        nombre: 'Teléfono',
-        precio: 15,
-        imagen: 'assets/img/computer.jpg'
+        nombre: 'EL REDENTOR',
+        precio: 15000,
+        imagen: 'assets/img/product/perro2.jpg'
     },
     {
-      nombre: 'perro 2x1',
-      precio: 15,
-      imagen: 'https://th.bing.com/th/id/OIP.XK7NNIsXhKiQTPFC6SBTTAHaEK?rs=1&pid=ImgDetMain'
-  },
-    // Agrega más productos aquí
+        nombre: 'EL MESÍAS',
+        precio: 15000,
+        imagen: 'assets/img/product/perro3.jpg'
+    },
+    // Puedes agregar más productos aquí si lo deseas
 ];
+
+// Cargar el carrito desde `localStorage`
+function cargarCarrito() {
+    const carritoGuardado = localStorage.getItem('carrito');
+    if (carritoGuardado) {
+        carrito = JSON.parse(carritoGuardado);
+    }
+}
+
+// Guardar el carrito en `localStorage`
+function guardarCarrito() {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+// Llamar a cargarCarrito al inicio para recuperar el carrito desde `localStorage`
+cargarCarrito();
+
+// Ejecutar la función para crear los productos en la página
+crearProductos();
+
+// Después de cargar el carrito, actualizar la interfaz de usuario
+mostrarCarrito(); // Muestra el contenido del carrito
+actualizarTodosLosBotones(); // Actualiza todos los botones de cantidad
 
 // Función para crear los elementos HTML de los productos
 function crearProductos() {
     const productosDiv = document.getElementById('productos');
     productos.forEach((producto, index) => {
         const productoDiv = document.createElement('div');
-        productoDiv.classList.add('col-lg-4', 'mb-3', 'col-md-6', 'mx-md-auto');
+        productoDiv.classList.add('col-lg-4', 'text-center');
         productoDiv.innerHTML = `
-            <div class="p-3 card boton text-center">
-                <div class="mx-auto">
-                    <img class="icon-lg" src="${producto.imagen}" alt="${producto.nombre}">
-                </div>
-                <h5 class="mt-4">${producto.nombre}</h5>
-                <p>$${producto.precio}</p>
-                <div class="agregar">
-                    <button class="btn btn-sm btn-warning" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">Agregar al carrito</button>
-                </div>
-                <div class="botones" style="display: none;">
-                    <button class="btn btn-sm btn-warning" onclick="disminuirCantidad('${producto.nombre}')">-</button>
-                    <span id="cantidad-producto-${index}">0</span>
-                    <button class="btn btn-sm btn-warning" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">+</button>
-                    
-                    
+            <div class="card mb-3 boton py-2">
+                <div class="d-flex align-items-center my-auto">
+                    <div class="author">
+                        <img src="${producto.imagen}" alt="${producto.nombre}" class="border-radius-lg shadow ms-2" style="width: 120px; height: 120px;">
+                    </div>
+                    <div class="text-start ms-2">
+                        <p class="text-dark font-weight-bold mb-0">${producto.nombre}</p>
+                        <span class="text-sm">descripcion</span>
+                        <p class="text-success">$ ${producto.precio}</p>
+                        <div class="agregar mt-n3">
+                            <button class="btn btn-sm btn-warning" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">Agregar al carrito</button>
+                        </div>
+                        <div class="botones mt-n3" style="display: none;">
+                            <button class="btn btn-sm btn-warning" onclick="disminuirCantidad('${producto.nombre}')">-</button>
+                            <button class="btn btn-sm" id="cantidad-producto-${index}">0</button>
+                            <button class="btn btn-sm btn-warning" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">+</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         `;
         productosDiv.appendChild(productoDiv);
+        // Llamar a mostrar la cantidad de los productos al crearlos
+        mostrarCantidadProducto(producto.nombre);
     });
 }
-
-// Ejecutar la función para crear los productos en la página
-crearProductos();
 
 // Función para agregar un producto al carrito
 function agregarAlCarrito(nombre, precio) {
@@ -66,7 +91,10 @@ function agregarAlCarrito(nombre, precio) {
         carrito.push({ nombre, precio, cantidad: 1 });
     }
 
-    // Muestra o esconde los botones y actualiza la cantidad del producto
+    // Guardar el carrito en `localStorage`
+    guardarCarrito();
+
+    // Muestra u oculta los botones y actualiza la cantidad del producto
     actualizarBotones(nombre);
     mostrarCantidadProducto(nombre);
     mostrarCarrito();
@@ -82,6 +110,11 @@ function disminuirCantidad(nombre) {
             // Elimina el producto si la cantidad llega a 0
             carrito = carrito.filter(p => p.nombre !== nombre);
         }
+        
+        // Guardar el carrito en `localStorage`
+        guardarCarrito();
+        
+        // Actualizar los botones y cantidad del producto
         actualizarBotones(nombre);
         mostrarCantidadProducto(nombre);
         mostrarCarrito();
@@ -90,9 +123,17 @@ function disminuirCantidad(nombre) {
 
 // Función para quitar un producto del carrito
 function quitarProducto(nombre) {
+    // Elimina el producto del carrito
     carrito = carrito.filter(p => p.nombre !== nombre);
+    
+    // Guardar el carrito en `localStorage`
+    guardarCarrito();
+    
+    // Actualizar los botones y cantidad del producto
     actualizarBotones(nombre);
     mostrarCantidadProducto(nombre);
+    
+    // Actualiza el carrito
     mostrarCarrito();
 }
 
@@ -135,19 +176,38 @@ function mostrarCarrito() {
     const carritoDiv = document.getElementById('carrito');
     carritoDiv.innerHTML = '';
 
+    // Variable para acumular el total
+    let total = 0;
+
+    // Itera sobre los productos en el carrito
     carrito.forEach(producto => {
+        // Calcula el subtotal para el producto
+        const subtotal = producto.precio * producto.cantidad;
+        
+        // Acumula el subtotal en el total
+        total += subtotal;
+
+        // Crea un div para mostrar el producto en el carrito
         const productoDiv = document.createElement('div');
         productoDiv.innerHTML = `
             <div class="border border-bottom border-dark"></div>
-            <p class="text-dark mt-1 mb-n1">${producto.nombre} - $${producto.precio} x ${producto.cantidad}</p>
-            
+            <p class="text-dark mt-1 mb-n1">${producto.nombre} - $${producto.precio} x ${producto.cantidad} = $${subtotal.toFixed(2)}</p>
             <button class="btn btn-sm bg-dark" onclick="disminuirCantidad('${producto.nombre}')">-</button>
             <button class="btn btn-sm btn-warning" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">+</button>
             <button class="btn btn-sm btn-danger" onclick="quitarProducto('${producto.nombre}')">Quitar</button>
         `;
         carritoDiv.appendChild(productoDiv);
     });
+
+    // Muestra el total de todos los productos en el carrito
+    const totalDiv = document.createElement('div');
+    totalDiv.innerHTML = `
+        <div class="border border-bottom border-dark"></div>
+        <p class="text-dark mt-1 mb-n1">Total: $${total.toFixed(2)}</p>
+    `;
+    carritoDiv.appendChild(totalDiv);
 }
+
 
 // Función para finalizar la compra y redirigir a WhatsApp
 function finalizarCompra() {
