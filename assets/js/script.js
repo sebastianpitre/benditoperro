@@ -4,20 +4,165 @@ let carrito = [];
 // Lista de productos disponibles (nombre, precio, imagen, categoría)
 const productos = [
     {
+        nombre: 'Promo 2x1',
+        precio: 18000,
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'promos'
+    },
+    {
+        nombre: 'Promo especial',
+        precio: 25000,
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'promos'
+    },
+
+
+    // Perros
+    {
         nombre: 'EL GOLIAT',
         precio: 25000,
-        imagen: 'assets/img/product/perro1.jpg'
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'perros'
     },
     {
         nombre: 'EL REDENTOR',
         precio: 15000,
-        imagen: 'assets/img/product/perro2.jpg'
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'perros'
     },
     {
         nombre: 'EL MESÍAS',
         precio: 15000,
-        imagen: 'assets/img/product/perro3.jpg'
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'perros'
     },
+    {
+        nombre: 'EL ARCA',
+        precio: 15000,
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'perros'
+    },
+    {
+        nombre: 'EL BENDITO',
+        precio: 8000,
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'perros'
+    },
+    {
+        nombre: 'GENESIS',
+        precio: 5000,
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'perros'
+    },
+
+
+    // HAMBURGUESAS
+    {
+        nombre: 'HAMBURGUESA GENESIS',
+        precio: 10000,
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'hamburguesas'
+    },
+    {
+        nombre: '2 DE GENESIS',
+        precio: 16000,
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'hamburguesas'
+    },
+
+    // Salchipapas
+    {
+        nombre: 'LA GENESIS',
+        precio: 10000,
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'salchipapas'
+    },
+    {
+        nombre: 'LA SANTA',
+        precio: 13000,
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'salchipapas'
+    },
+    {
+        nombre: 'LA BENDITA',
+        precio: 17000,
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'salchipapas'
+
+    },
+    {
+        nombre: 'LA BENDICIÓN',
+        precio: 25000,
+        imagen: 'assets/img/product/no-imagen.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'salchipapas'
+    },
+    
+
+    // Jugos
+    {
+        nombre: 'COCA COLA 1.5L',
+        precio: 6000,
+        imagen: 'assets/img/product/no-bebida.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'jugos'
+    },
+    {
+        nombre: 'POSTOBON 1L',
+        precio: 4000,
+        imagen: 'assets/img/product/no-bebida.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'jugos'
+    },
+    {
+        nombre: 'COCA COLA P400',
+        precio: 3000,
+        imagen: 'assets/img/product/no-bebida.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'jugos'
+    },
+    {
+        nombre: 'POSTOBON P400',
+        precio: 3000,
+        imagen: 'assets/img/product/no-bebida.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'jugos'
+    },
+    {
+        nombre: 'CUANTRO P400',
+        precio: 3000,
+        imagen: 'assets/img/product/no-bebida.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'jugos'
+    },
+    {
+        nombre: 'AGUA SABORISADA',
+        precio: 2000,
+        imagen: 'assets/img/product/no-bebida.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'jugos'
+    },
+    {
+        nombre: 'AGUA PEQUEÑA',
+        precio: 1000,
+        imagen: 'assets/img/product/no-bebida.jpg',
+        descripcion: 'descipcion del producto',
+        categoria: 'jugos'
+    },
+    
     // Puedes agregar más productos aquí si lo deseas
 ];
 

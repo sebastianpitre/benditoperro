@@ -2,27 +2,71 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Carrito de compras</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/logo.jpeg">
+    <link rel="icon" type="gif" href="assets/img/logoorg.png">
+    <title>
+      ¡BENDITO PERRO!
+    </title>
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <!-- Nucleo Icons -->
+    <link href=" assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href=" assets/css/nucleo-svg.css" rel="stylesheet" />
+  
+    <link rel="stylesheet" href="assets/css/intro.css">
+  
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <!-- CSS Files -->
+    <link id="pagestyle" href=" assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+    <!-- Nepcha Analytics (nepcha.com) -->
+    <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+    <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+  </head>
+  
 
 <body>
+    <h2>promos</h2>
+    <div class="row" id="promos"></div>
+    
     <h1>Productos</h1>
 
-    <h2>Comida</h2>
-    <div id="comida"></div>
+    <h2>salchipapas</h2>
+    <div class="row" id="salchipapas"></div>
 
-    <h2>Bebidas</h2>
-    <div id="bebidas"></div>
+    <h2>perros</h2>
+    <div class="row" id="perros"></div>
 
-    <h2>Electrónica</h2>
-    <div id="electrónica"></div>
+    <h2>bebidas</h2>
+    <div class="row" id="jugos"></div>
 
-    <h2>Carrito de compras</h2>
-    <div id="carrito"></div>
-
+    <div class="position-fixed " style="right: 10px; bottom: 10px; z-index: 9999;">
+        <h2>Carrito de compras</h2>
+    <div class="row" id="carrito"></div>
     <button onclick="finalizarCompra()">Finalizar compra</button>
+    </div>
+    
+
+    <script>
+      // Función para borrar todos los datos guardados en `localStorage`
+      function borrarLocalStorage() {
+          // Borra todos los datos de `localStorage`
+          localStorage.clear();
+          console.log('Todos los datos en localStorage han sido borrados.');
+  
+          // Recarga la página
+          window.location.reload();
+      }
+  
+    </script>
 
     <script src="carrito.js"></script>
 </body>
