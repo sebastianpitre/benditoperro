@@ -355,7 +355,8 @@ function mostrarCarrito() {
         const productoDiv = document.createElement('div');
         productoDiv.innerHTML = `
                 <div class="border border-bottom border-warning"></div>
-                <p class="text-dark mt-1">${producto.nombre} - $${producto.precio}  </p><p class="text-end mt-n4">x ${producto.cantidad}</p><p class="text-end mt-n3 mb-n4">$ ${subtotal.toFixed(2)} </p>
+                <p class="text-dark mt-2 mb-n3">${producto.nombre} - $${producto.precio}  </p><p class="text-end mt-n4">x ${producto.cantidad}</p>
+                <p class="text-end mt-n3 mb-n4">$ ${subtotal.toFixed(2)} </p>
                 <button class="btn btn-sm bg-dark" onclick="disminuirCantidad('${producto.nombre}')">-</button>
                 <button class="btn btn-sm btn-warning" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">+</button>
                 <button class="btn btn-sm btn-danger" onclick="quitarProducto('${producto.nombre}')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">

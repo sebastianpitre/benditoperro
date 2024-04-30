@@ -109,6 +109,25 @@
         </div>
       </div>
 
+      <div class="sticky opacity-9 card">
+        <div class="row pb-1 px-1 justify-content-center">
+          <a href="#set1" class="col-3 mt-1 col-sm-3 mx-1 border border-radius-2xl border-warning text-center text-sm text-edo">
+            promos
+          </a>
+          <a href="#set2" class="col-3 mt-1 col-sm-3 mx-1 border border-radius-2xl border-warning text-center text-sm text-edo">
+            Perros
+          </a>
+          <a href="#set3" class="col-5 mt-1 col-sm-3 mx-1 border border-radius-2xl border-warning text-center text-sm text-edo">
+            hamburguesas
+          </a>
+          <a href="#set4" class="col-5 mt-1 col-sm-3 mx-1 border border-radius-2xl border-warning text-center text-sm text-edo">
+            salchipapas
+          </a>
+          <a href="#set5" class="col-3 mt-1 col-sm-3 mx-1 border border-radius-2xl border-warning text-center text-sm text-edo">
+            bebidas
+          </a>
+        </div>
+      </div>
       <div id="set1" class="col-lg-12 mt-3">
         <h2 class="text-warning text-edo">PROMOS</h2>
       </div>
@@ -281,11 +300,65 @@
     // Función para borrar todos los datos guardados en `localStorage`
     function borrarLocalStorage() {
         // Borra todos los datos de `localStorage`
-        localStorage.removeItem('carrito');
+        localStorage.clear();
+        console.log('Todos los datos en localStorage han sido borrados.');
+
         document.getElementById('carrito').innerText = 'Carrito vacío';
         // Recarga la página
         window.location.reload();
     }
+
+    // Función para reproducir un sonido al agregar
+    function reproducirMas(urlSonidoMas) {
+        // Crea un nuevo objeto Audio con la URL del sonido
+        const sonido = new Audio(urlSonidoMas);
+
+        // Reproduce el sonido
+        sonido.play()
+            .then(() => {
+                console.log('Sonido reproducido con éxito.');
+            })
+            .catch((error) => {
+                console.error('Error al reproducir el sonido:', error);
+            });
+    }
+
+    // Función para reproducir un sonido al borrar
+    function reproducirMenos(urlSonidoMenos) {
+        // Crea un nuevo objeto Audio con la URL del sonido
+        const sonido = new Audio(urlSonidoMenos);
+
+        // Reproduce el sonido
+        sonido.play()
+            .then(() => {
+                console.log('Sonido reproducido con éxito.');
+            })
+            .catch((error) => {
+                console.error('Error al reproducir el sonido:', error);
+            });
+    }
+
+    // Función para reproducir un sonido al borrar
+    function reproducirFin(urlSonidoFin) {
+        // Crea un nuevo objeto Audio con la URL del sonido
+        const sonido = new Audio(urlSonidoFin);
+
+        // Reproduce el sonido
+        sonido.play()
+            .then(() => {
+                console.log('Sonido reproducido con éxito.');
+            })
+            .catch((error) => {
+                console.error('Error al reproducir el sonido:', error);
+            });
+    }
+
+    // Ejemplo de uso
+    // Llama a la función con la URL del sonido que deseas reproducir
+    // Puedes usar una URL local o remota
+    const urlSonidoMas = 'assets/audio/7.mp3';
+    const urlSonidoMenos = 'assets/audio/11.mp3';
+    const urlSonidoFin = 'assets/audio/6.mp3';
 
   </script>
 </body>

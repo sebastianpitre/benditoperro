@@ -109,6 +109,25 @@
         </div>
       </div>
 
+      <div class="sticky opacity-9 card">
+        <div class="row pb-1 px-1 justify-content-center">
+          <a href="#set1" class="col-3 mt-1 col-sm-3 mx-1 border border-radius-2xl border-warning text-center text-sm text-edo">
+            promos
+          </a>
+          <a href="#set2" class="col-3 mt-1 col-sm-3 mx-1 border border-radius-2xl border-warning text-center text-sm text-edo">
+            Perros
+          </a>
+          <a href="#set3" class="col-5 mt-1 col-sm-3 mx-1 border border-radius-2xl border-warning text-center text-sm text-edo">
+            hamburguesas
+          </a>
+          <a href="#set4" class="col-5 mt-1 col-sm-3 mx-1 border border-radius-2xl border-warning text-center text-sm text-edo">
+            salchipapas
+          </a>
+          <a href="#set5" class="col-3 mt-1 col-sm-3 mx-1 border border-radius-2xl border-warning text-center text-sm text-edo">
+            bebidas
+          </a>
+        </div>
+      </div>
       <div id="set1" class="col-lg-12 mt-3">
         <h2 class="text-warning text-edo">PROMOS</h2>
       </div>
@@ -135,7 +154,7 @@
       <div class="row" id="jugos"></div>
 
       <div class="position-fixed " style="right: 10px; bottom: 10px; z-index: 9999;">
-        <button type="button" class="btn btn-warning" id="cartBtn">
+        <button type="button" class="btn btn-warning" id="openModal1">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="35" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
           <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"></path>
           </svg></button>
@@ -188,45 +207,113 @@
   <div id="cartModal" class="modal">
     <div class="modal-content">
       <span class="close" id="closeBtn">&times;</span>
+      
+      
+    </div>
+  </div>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal1">&times;</span>
       <h4 class="text-warning text-center text-edo">Carrito</h4>
       <div id="carrito">Carrito vacio</div>
-      <!-- Botón para finalizar la compra -->
+
       <div class="row text-center mb-n3 mt-3">
         <div class="col-6">
-          <button class="btn btn-sm btn-danger" onclick="borrarLocalStorage()">vaciar carrito</button>
+          <button id="borrarCarritoBtn" class="btn btn-sm btn-danger" onclick="borrarLocalStorage()">vaciar carrito</button>
         </div>
         <div class="col-6">
-          <button class="btn btn-sm btn-warning" onclick="finalizarCompra()">Finalizar compra</button>
+          <button id="openModal2" class="btn btn-sm btn-warning">Continuar la compra</button>
         </div>
       </div>
-      
+
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <div class="row mb-n3 mt-3">
+        <!-- Campo de entrada para ingresar la dirección -->
+
+        <div class="col-12 mx-auto">
+          <label class="text-warning font-weight-bold">Nombre de quien recibe</label>
+          <div class="input-group input-group-static is-filled">
+            <input type="text" class="form-control" id="nombre" value="" placeholder="Ingrese el nombre de quien recibe el pedido">
+          </div>
+        </div>
+
+        <div class="col-12 mt-2 mx-auto">
+          <label class="text-warning font-weight-bold"> Dirección de envio</label>
+          <div class="input-group input-group-static is-filled">
+            <input type="text" class="form-control" id="direccion" value="" placeholder="Ingrese su direccion">
+          </div>
+        </div>
+        
+        <div class="col-auto mt-2">
+          <button class="btn btn-sm btn-dark text-white" onclick="guardarDireccion()">Guardar dirección</button>
+        </div>
+
+        <p>Nombre: <span id="nombreMostrado"></span></p>
+        <p class="mt-n1">Dirección: <span id="direccionMostrada"></span></p>
+
+        <div class="col-12 text-end">
+          <button id="closeModal2" class="btn btn-sm justify-content-end btn-danger" onclick="finalizarCompra()">volver</button>
+          <button id="finalizarCompraBtn" class="btn btn-sm justify-content-end btn-warning" onclick="finalizarCompra()">Finalizar compra</button>
+        </div>
+      </div>
     </div>
   </div>
 
 
 
+
+
   <script>
-    // Obtener los elementos del DOM
-    const cartModal = document.getElementById('cartModal');
-    const cartBtn = document.getElementById('cartBtn');
-    const closeBtn = document.getElementById('closeBtn');
+    // Función para abrir el Modal 1
+    document.getElementById('openModal1').onclick = function() {
+        document.getElementById('modal1').style.display = 'block';
+    };
 
-    // Función para abrir el modal
-    cartBtn.onclick = function () {
-      cartModal.style.display = 'block';
+    // Función para cerrar el Modal 1
+    document.getElementById('closeModal1').onclick = function() {
+        document.getElementById('modal1').style.display = 'none';
+    };
+
+    // Función para abrir el Modal 2
+    document.getElementById('openModal2').onclick = function() {
+        document.getElementById('modal2').style.display = 'block';
+    };
+
+    // Función para cerrar el Modal 2
+    document.getElementById('closeModal2').onclick = function() {
+        document.getElementById('modal2').style.display = 'none';
+    };
+
+    // Cerrar los modales si el usuario hace clic fuera de ellos
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('modal1')) {
+            document.getElementById('modal1').style.display = 'none';
+        }
+        if (event.target == document.getElementById('modal2')) {
+            document.getElementById('modal2').style.display = 'none';
+        }
+    };
+
+    // Puedes definir funciones específicas para finalizar la compra en cada modal
+    function finalizarCompraModal1() {
+        alert('Finalizar compra en Modal 1');
+        // Lógica para finalizar la compra en Modal 1
     }
 
-    // Función para cerrar el modal
-    closeBtn.onclick = function () {
-      cartModal.style.display = 'none';
+    function finalizarCompraModal2() {
+        alert('Finalizar compra en Modal 2');
+        // Lógica para finalizar la compra en Modal 2
     }
 
-    // Cerrar el modal si el usuario hace clic fuera de él
-    window.onclick = function (event) {
-      if (event.target == cartModal) {
-        cartModal.style.display = 'none';
-      }
-    }
   </script>
 
 
@@ -276,7 +363,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.2.2/intro.min.js"></script>
   <script src="assets/js/instrucciones.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="plan2.js"></script>
+
+  <script src="plan3.js"></script>
+
   <script>
     // Función para borrar todos los datos guardados en `localStorage`
     function borrarLocalStorage() {
@@ -286,6 +375,25 @@
         // Recarga la página
         window.location.reload();
     }
+    // Función para reproducir un sonido al agregar
+    function reproducirMas(urlSonidoMas) {
+        const sonido = new Audio(urlSonidoMas);
+        sonido.play()
+    }
+    // Función para reproducir un sonido al borrar
+    function reproducirMenos(urlSonidoMenos) {
+        const sonido = new Audio(urlSonidoMenos);
+        sonido.play()
+    }
+    // Función para reproducir un sonido al finalizar
+    function reproducirFin(urlSonidoFin) {
+        const sonido = new Audio(urlSonidoFin);
+        sonido.play()
+    }
+    // Puedes usar una URL local o remota
+    const urlSonidoMas = 'assets/audio/7.mp3';
+    const urlSonidoMenos = 'assets/audio/11.mp3';
+    const urlSonidoFin = 'assets/audio/6.mp3';
 
   </script>
 </body>

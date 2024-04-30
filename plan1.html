@@ -53,12 +53,6 @@
       font-weight: 700;
       font-style: normal;
     }
-    div.sticky {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 5px;
-      z-index: 100;
-    }
   </style>
   <header class="bg-gradient-dark">
     <div class="page-header min-vh-50"
@@ -100,39 +94,57 @@
     </div>
   </header>
 
+  <!-- <div id="carouselExampleCaptions" class="carousel slide col-12" data-bs-ride="carousel" style="">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-block w-100" style="height: 300px; background-image: url(&quot;assets/img/product/perro1.jpg&quot;); background-position-y: 50%; background-size: cover;"></div>
+        <span class="mask bg-gradient-dark opacity-5"></span>
+        <div class="carousel-caption ">
+          <h5 class="text-white">First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-block w-100" style="height: 300px; background-image: url(&quot;assets/img/product/perro2.jpg&quot;); background-position-y: 50%; background-size: cover;"></div>
+        <span class="mask bg-gradient-dark opacity-8"></span>
+        <div class="carousel-caption">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-block w-100" style="height: 300px; background-image: url(&quot;assets/img/product/perro3.jpg&quot;); background-position-y: 50%; background-size: cover; background-position-x: 70%;"></div>
+        <span class="mask bg-gradient-dark opacity-8"></span>
+        <div class="carousel-caption">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> -->
   <section class="py-6 mt-n3 bg-gray-100">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 mx-auto  text-center ">
+        <div class="col-lg-6 mx-auto text-center ">
           <h2 class="text-warning text-edo">Menu</h2>
-          
+          <p>Haz clic sobre los producto que deseas agregar al carrito</p>
         </div>
       </div>
 
-      <div id="set1" class="col-lg-12 mt-3">
-        <h2 class="text-warning text-edo">PROMOS</h2>
-      </div>
-      <div class="row" id="promos"></div>
-
-      <div id="set2" class="col-lg-6">
-        <h2 class="text-warning text-edo">perros</h2>
-      </div>
-      <div class="row" id="perros"></div>
-
-      <div id="set3" class="col-lg-6">
-        <h2 class="text-warning text-edo">Hamburguesas</h2>
-      </div>
-      <div class="row" id="hamburguesas"></div>
-      
-      <div id="set4" class="col-lg-12 ">
-        <h2 class="text-warning text-edo">salchipapas</h2>
-      </div>
-      <div class="row" id="salchipapas"></div>
-
-      <div id="set5" class="col-lg-6">
-        <h2 class="text-warning text-edo">bebidas</h2>
-      </div>
-      <div class="row" id="jugos"></div>
+      <div class="row" id="productos"></div>
 
       <div class="position-fixed " style="right: 10px; bottom: 10px; z-index: 9999;">
         <button type="button" class="btn btn-warning" id="cartBtn">
@@ -142,13 +154,14 @@
       </div>
 
   </section>
+  <!-- Contenedor para los productos, se llenará dinámicamente con JavaScript -->
 
   <style>
     /* Estilo para el modal */
     .modal {
       display: none;
       position: fixed;
-      z-index: 9999;
+      z-index: 1;
       padding-top: 100px;
       left: 0;
       top: 0;
@@ -276,13 +289,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.2.2/intro.min.js"></script>
   <script src="assets/js/instrucciones.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="plan2.js"></script>
+  <script src="assets/js/script.js"></script>
   <script>
     // Función para borrar todos los datos guardados en `localStorage`
     function borrarLocalStorage() {
         // Borra todos los datos de `localStorage`
         localStorage.removeItem('carrito');
         document.getElementById('carrito').innerText = 'Carrito vacío';
+
         // Recarga la página
         window.location.reload();
     }

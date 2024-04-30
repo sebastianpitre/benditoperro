@@ -22266,7 +22266,7 @@ body.dark-version {
 .input-group.input-group-dynamic .form-control:focus,
 .input-group.input-group-static .form-control,
 .input-group.input-group-static .form-control:focus {
-  background-image: linear-gradient(0deg, #e91e63 2px, rgba(156, 39, 176, 0) 0), linear-gradient(0deg, #d2d2d2 1px, rgba(209, 209, 209, 0) 0);
+  background-image: linear-gradient(0deg, #fb8c00  2px, rgba(156, 39, 176, 0) 0), linear-gradient(0deg, #d2d2d2 1px, rgba(209, 209, 209, 0) 0);
   border-radius: 0 !important;
 }
 
@@ -22278,7 +22278,7 @@ body.dark-version {
 .input-group.input-group-dynamic .form-control[disabled],
 .input-group.input-group-static .form-control[disabled] {
   cursor: not-allowed;
-  background-image: linear-gradient(0deg, #e91e63 2px, rgba(156, 39, 176, 0) 0), linear-gradient(0deg, #f0f2f5 1px, rgba(209, 209, 209, 0) 0) !important;
+  background-image: linear-gradient(0deg, #fb8c00  2px, rgba(156, 39, 176, 0) 0), linear-gradient(0deg, #f0f2f5 1px, rgba(209, 209, 209, 0) 0) !important;
 }
 
 .input-group.input-group-dynamic .input-group-text,
