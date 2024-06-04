@@ -4,14 +4,14 @@ let carrito = [];
 // Lista de productos disponibles con nombre, precio, imagen y categoría
 const productos = [
     {
-        nombre: 'Promo 2x1',
+        nombre: 'COMBO 2x1',
         precio: 18000,
         imagen: 'assets/img/product/no-imagen.jpg',
         descripcion: 'descipcion del producto',
         categoria: 'promos'
     },
     {
-        nombre: 'Promo especial',
+        nombre: 'COMBO ESPECIAL',
         precio: 25000,
         imagen: 'assets/img/product/no-imagen.jpg',
         descripcion: 'descipcion del producto',
@@ -405,7 +405,7 @@ function mostrarCarrito() {
                 <div class="border border-bottom border-warning"></div>
                 <p class="text-dark mt-2 mb-n3">${producto.nombre} - $${producto.precio}  </p><p class="text-end mt-n4">x ${producto.cantidad}</p>
                 <p class="text-end mt-n3 mb-n4">$ ${subtotal.toFixed(2)} </p>
-                <button class="btn btn-sm bg-dark" onclick="disminuirCantidad('${producto.nombre}')">-</button>
+                <button class="btn btn-sm text-white bg-dark" onclick="disminuirCantidad('${producto.nombre}')">-</button>
                 <button class="btn btn-sm btn-warning" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">+</button>
                 <button class="btn btn-sm btn-danger" onclick="quitarProducto('${producto.nombre}')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                 <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
