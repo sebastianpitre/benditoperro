@@ -186,6 +186,13 @@ function cargarCarrito() {
         document.getElementById('nombre').value = nombreGuardado;
         document.getElementById('nombreMostrado').textContent = nombreGuardado;
     }
+
+    // Cargar el nombre desde `localStorage`
+    const tipoPagoGuardado = localStorage.getItem('tipoPago');
+    if (tipoPagoGuardado) {
+        document.getElementById('tipoPago').value = tipoPagoGuardado;
+        document.getElementById('tipoPagoMostrado').textContent = tipoPagoGuardado;
+    }
 }
 
 // Guardar solo la dirección en `localStorage`
@@ -195,6 +202,7 @@ function guardarDireccion() {
     // Muestra la dirección en el elemento con ID `direccionMostrada`
     document.getElementById('direccionMostrada').textContent = `${direccion}`;
     guardarNombre()
+    guardarTipoPago()
 }
 
 // Guardar solo el nombre en `localStorage`
@@ -203,6 +211,14 @@ function guardarNombre() {
     localStorage.setItem('nombre', nombre);
     // Muestra el nombre en el elemento con ID `nombreMostrado`
     document.getElementById('nombreMostrado').textContent = `${nombre}`;
+}
+
+// Guardar solo el tipo de pago en `localStorage`
+function guardarTipoPago() {
+    const tipoPago = document.getElementById('tipoPago').value;
+    localStorage.setItem('tipoPago', tipoPago);
+    // Muestra el tipoPago en el elemento con ID `tipoPagoMostrado`
+    document.getElementById('tipoPagoMostrado').textContent = `${tipoPago}`;
 }
 
 
@@ -410,12 +426,15 @@ function mostrarCarrito() {
     // Deshabilitar el botón de borrar si el carrito está vacío
     const borrarCarritoBtn = document.getElementById('borrarCarritoBtn');
     const finalizarCompraBtn = document.getElementById('finalizarCompraBtn');
+    const openModal2 = document.getElementById('openModal2');
     if (carrito.length === 0) {
         borrarCarritoBtn.disabled = true;
         finalizarCompraBtn.disabled = true;
+        openModal2.disabled = true;
     } else {
         borrarCarritoBtn.disabled = false;
         finalizarCompraBtn.disabled = false;
+        openModal2.disabled = false;
     }
 }
 
@@ -445,7 +464,11 @@ function finalizarCompra() {
     if (direccion) {
         mensaje += `*Dirección:* ${direccion}.\n\n`;
     }
-    
+    // Agrega el nombre al mensaje de WhatsApp
+    const tipoPago = document.getElementById('tipoPago').value;
+    if (tipoPago) {
+        mensaje += `*Forma de pago:* ${tipoPago}.\n\n`;
+    }
     // Genera la URL para redirigir a WhatsApp
     const url = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}Muchas gracias!`;
     window.location.href = url; // Redirige a WhatsApp

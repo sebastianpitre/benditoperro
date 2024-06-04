@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito con Modal</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Incluye tu archivo CSS aquí -->
+</head>
+<body>
+    <!-- Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeBtn">&times;</span>
+            <h4 class="text-warning text-center text-edo">Carrito</h4>
+            <div id="carrito">Carrito vacio</div>
+            <!-- Botón para finalizar la compra -->
+            <div class="row text-center mb-n3 mt-3">
+                <!-- Select para elegir la forma de entrega -->
+                <div class="col-12">
+                    <div class="input-group input-group-static is-filled">
+                        <select id="formaEntrega" class="form-control">
+                            <option value="">Seleccione forma de entrega</option>
+                            <option value="domicilio">Domicilio</option>
+                            <option value="recoger">Recoger</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Campo de entrada para ingresar la dirección -->
+                <div class="col-8 mt-3">
+                    <div class="input-group input-group-static is-filled">
+                        <input type="text" class="form-control" id="direccion" value="" placeholder="Ingrese su direccion" disabled>
+                    </div>
+                </div>
+                
+                <div class="col-auto mt-3">
+                    <button class="btn btn-sm btn-dark mb-n2 text-white" onclick="guardarFormaEntrega()">Guardar dirección</button>
+                </div>
+        
+                <p>Dirección/Forma de Pago: <span id="formaPago"></span></p>
+        
+                <div class="col-6">
+                    <button id="borrarCarritoBtn" class="btn btn-sm btn-danger" onclick="borrarLocalStorage()">Vaciar carrito</button>
+                </div>
+                
+                <div class="col-6">
+                    <button id="finalizarCompraBtn" class="btn btn-sm btn-warning" onclick="finalizarCompra()">Finalizar compra</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <button id="cartBtn">Abrir Carrito</button>
+
+    <script src="js.js"></script> <!-- Incluye tu archivo JS aquí -->
+</body>
+</html>

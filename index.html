@@ -32,218 +32,392 @@
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
 </head>
 
-<section class="py-3">
-  <div class="bg-gradient-primary">
-    <div class="container pb-lg-9 pb-7 pt-7 postion-relative z-index-2">
-      <div class="row">
-        <div class="col-md-8 mx-auto text-center">
-          <span class="badge bg-gradient-dark mb-2">Software profesional - Bendito perro</span>
-          <h3 class="text-white">Consulta nuestros precios</h3>
-          <p class="text-white">Tiene actualizaciones ilimitadas gratuitas y soporte premium en cada paquete.</p>
+<body class="blog-author bg-gray-200">
+
+
+  <style>
+    @font-face {
+    font-family: 'MiFuente';
+    src: url('assets/fonts/edo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .text-edo{
+    font-family: 'MiFuente', "Caveat";
+    font-weight: normal;
+    font-style: normal;
+  }
+    .text-caveat {
+      font-family: "Caveat", cursive;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+    }
+    div.sticky {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 5px;
+      z-index: 100;
+    }
+  </style>
+  <header class="bg-gradient-dark">
+    <div class="page-header min-vh-50"
+      style="background-image: url(&quot;assets/img/product/perro1.jpg&quot;); background-position-y: 50%; background-size: cover; background-position-x: 70%;">
+      <span class="mask bg-gradient-dark opacity-8"></span>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mx-auto my-auto">
+
+            <div class="p-3 warning-horizontal justify-content-center d-flex ">
+              <img class="avatar avatar-xl" src="assets/img/logo.jpg" alt="">
+              <h1 class="text-white text-edo ms-3 text-uppercase my-auto">Bendito perro</h1>
+            </div>
+            <p class="text-edo mb-4 text-white ">
+              Somos <span class="text-warning">cocina oculta ...</span> <br>
+              <span class="bg-warning card col-lg-4 col-6 mx-auto">Solo domiciolios</span>
+            </p>
+
+
+          </div>
         </div>
       </div>
+      <div class="position-absolute w-100 z-index-1 bottom-0">
+        
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+          </defs>
+          <g class="moving-waves">
+            <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40"></use>
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="16" fill="#dee2e6"></use>
+          </g>
+        </svg>
+      </div>
     </div>
-  </div>
-  <div class="mt-n7">
+  </header>
+
+  <section class="py-6 mt-n3 bg-gray-300">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3 mb-lg-auto mb-4 my-auto p-md-0 ms-auto">
-          <div class="card ">
-            <div class="card-header text-center pt-4 pb-2">
-              <h6 class="text-dark opacity-8 text mb-0">Plan Estandar</h6>
-              <h1 class="font-weight-bolder">
-                <small>$</small>600.000
-              </h1>
-            </div>
-            <div class="card-body mx-auto pt-0">
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Lista de precios</span>
-                </div>
-              </div>
+        <div class="col-lg-6 mx-auto  text-center ">
+          <h2 class="text-warning text-edo">Menu</h2>
+          
+        </div>
+      </div>
 
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Usuarios ilimitados</span>
-                </div>
-              </div>
+      <div class="sticky opacity-9 card bg-white container">
+        <div class="row pb-1 px-1 justify-content-center">
+          <a href="#set1" class="col-3 mt-1 col-sm-3 mx-1 border border-radius-2xl text-white bg-dark text-center text-sm text-edo">
+            Combos
+          </a>
+          <a href="#set2" class="col-3 mt-1 col-sm-3 mx-1 border border-radius-2xl text-white bg-dark text-center text-sm text-edo">
+            Perros
+          </a>
+          <a href="#set3" class="col-5 mt-1 col-sm-3 mx-1 border border-radius-2xl text-white bg-dark text-center text-sm text-edo">
+            hamburguesas
+          </a>
+          <a href="#set4" class="col-5 mt-1 col-sm-3 mx-1 border border-radius-2xl text-white bg-dark text-center text-sm text-edo">
+            salchipapas
+          </a>
+          <a href="#set5" class="col-3 mt-1 col-sm-3 mx-1 border border-radius-2xl text-white bg-dark text-center text-sm text-edo">
+            bebidas
+          </a>
+        </div>
+      </div>
+      <div class=" mt-2 border-bottom border-warning">
 
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Pedidos rapidos hacia whatsapp</span>
-                </div>
-              </div>
+        <div id="set1" class="col-lg-12 mt-3 ">
+          <h2 class="text-warning text-edo">Combos</h2>
+        </div>
+        <div class="row" id="promos"></div>
+      </div>
+      
 
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Excelente esperiecia para el usuario</span>
-                </div>
-              </div>
+      <div id="set2" class="col-lg-6 mt-4">
+        <h2 class="text-warning text-edo">perros</h2>
+      </div>
+      <div class="row" id="perros"></div>
 
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Adaptable a cualquier dispositivo</span>
-                </div>
-              </div>
+      <div id="set3" class="col-lg-6">
+        <h2 class="text-warning text-edo">Hamburguesas</h2>
+      </div>
+      <div class="row" id="hamburguesas"></div>
+      
+      <div id="set4" class="col-lg-12 ">
+        <h2 class="text-warning text-edo">salchipapas</h2>
+      </div>
+      <div class="row" id="salchipapas"></div>
 
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Diseño a otro nivel</span>
-                </div>
-              </div>
+      <div id="set5" class="col-lg-6">
+        <h2 class="text-warning text-edo">bebidas</h2>
+      </div>
+      <div class="row" id="jugos"></div>
 
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Dividida por categorias</span>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer pt-0">
-              <a href="plan2.html" class="btn w-100 bg-gradient-dark mb-0" target="_blank">Visitar</a>
-            </div>
+      <div class="position-fixed " style="right: 10px; bottom: 10px; z-index: 9999;">
+        <button type="button" class="btn btn-warning" id="openModal1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="35" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"></path>
+          </svg></button>
+      </div>
+
+  </section>
+
+  <style>
+    /* Estilo para el modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Estilo para el contenido del modal */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    /* Botón para cerrar el modal */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeBtn">&times;</span>
+      
+      
+    </div>
+  </div>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal1">&times;</span>
+      <h4 class="text-warning text-center text-edo">Carrito</h4>
+      <div id="carrito">Carrito vacio</div>
+
+      <div class="row text-center mb-n3 mt-3">
+        <div class="col-6">
+          <button id="borrarCarritoBtn" class="btn btn-sm btn-danger" onclick="borrarLocalStorage()">vaciar carrito</button>
+        </div>
+        <div class="col-6">
+          <button id="openModal2" class="btn btn-sm btn-warning">Confirmar pedido</button>
+        </div>
+      </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <div class="row mb-n3 mt-3">
+        <!-- Campo de entrada para ingresar la dirección -->
+
+        <div class="col-12 mx-auto">
+          <label class="text-warning font-weight-bold">Nombre de quien recibe</label>
+          <div class="input-group input-group-static is-filled">
+            <input type="text" class="form-control" id="nombre" value="" placeholder="Ingrese el nombre de quien recibe el pedido">
           </div>
         </div>
 
-        <div class="col-lg-3 mb-lg-auto mb-4 my-auto p-md-0 me-auto">
-          <div class="card">
-            <div class="card-header text-center pt-4 pb-3">
-              <h6 class="text-dark opacity-8 text mb-0 mt-2">Plan Pro ⭐</h6>
-              <h1 class="font-weight-bolder">
-                <small>$</small>700.000
-              </h1>
-            </div>
-            <div class="card-body mx-auto pt-0">
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Lista de precios</span>
-                </div>
-              </div>
-
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Usuarios ilimitados</span>
-                </div>
-              </div>
-
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Pedidos rapidos hacia whatsapp</span>
-                </div>
-              </div>
-
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Excelente esperiecia para el usuario</span>
-                </div>
-              </div>
-
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Adaptable a cualquier dispositivo</span>
-                </div>
-              </div>
-
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Diseño a otro nivel</span>
-                </div>
-              </div>
-
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Dividida por categorias</span>
-                </div>
-              </div>
-
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Menú de desplazamiento rapido</span>
-                </div>
-              </div>
-
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Efectos de sonido</span>
-                </div>
-              </div>
-              
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Apartado de direcciones</span>
-                </div>
-              </div>
-
-              <div class="justify-content-start d-flex px-2 py-1">
-                <div>
-                  <i class="fas fa-check text-dark opacity-6 text-sm"></i>
-                </div>
-                <div class="ps-2">
-                  <span class="text-sm">Apartado de informacion del cliente</span>
-                </div>
-              </div>
-
-            </div>
-            <div class="card-footer pt-0">
-              <a href="plan3.html" class="btn btn-icon bg-gradient-primary d-block mb-0 icon-move-right" target="_blank">Visitar
-                <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i>
-              </a>
-            </div>
+        <div class="col-12 mt-2 mx-auto">
+          <label class="text-warning font-weight-bold"> Dirección de envio</label>
+          <div class="input-group input-group-static is-filled">
+            <input type="text" class="form-control" id="direccion" value="" placeholder="Ingrese su direccion">
           </div>
+        </div>
+
+        <div class="col-lg-6 mt-2">
+          <label class="text-warning font-weight-bold"> Seleccione forma de pago</label>
+
+          <select  class="form-select p-2 border" aria-label="Selecciona una opción" id="tipoPago">
+              <option value="Efectivo">Efectivo</option>
+              <option value="Transferencia">Transferencia</option>
+          </select>
+        </div>
+        
+        <div class="col-auto col-12 mt-2">
+          <button class="btn btn-sm btn-dark text-white" onclick="guardarDireccion()">Validar datos</button>
+        </div>
+        <p>Verifique los datos antes finalizar el pedido</p>
+        <div class="card bg-gray-200 border-1 border-dark pt-2">
+          
+          <p>Nombre: <span id="nombreMostrado"></span></p>
+          <p class="mt-n1">Dirección: <span id="direccionMostrada"></span></p>
+          <p class="mt-n1">Forma de pago: <span id="tipoPagoMostrado"></span></p>
+        </div>
+        
+
+        <div class="col-12 mt-3 text-end">
+          <button id="closeModal2" class="btn btn-sm justify-content-end btn-danger">volver al carrito</button>
+          <button id="finalizarCompraBtn" class="btn btn-sm justify-content-end btn-warning" onclick="finalizarCompra()">Finalizar Pedido</button>
         </div>
       </div>
     </div>
   </div>
-</section>
+
+
+
+
+
+  <script>
+    // Función para abrir el Modal 1
+    document.getElementById('openModal1').onclick = function() {
+        document.getElementById('modal1').style.display = 'block';
+    };
+
+    // Función para cerrar el Modal 1
+    document.getElementById('closeModal1').onclick = function() {
+        document.getElementById('modal1').style.display = 'none';
+    };
+
+    // Función para abrir el Modal 2
+    document.getElementById('openModal2').onclick = function() {
+        document.getElementById('modal2').style.display = 'block';
+    };
+
+    // Función para cerrar el Modal 2
+    document.getElementById('closeModal2').onclick = function() {
+        document.getElementById('modal2').style.display = 'none';
+    };
+
+    // Cerrar los modales si el usuario hace clic fuera de ellos
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('modal1')) {
+            document.getElementById('modal1').style.display = 'none';
+        }
+        if (event.target == document.getElementById('modal2')) {
+            document.getElementById('modal2').style.display = 'none';
+        }
+    };
+
+    // Puedes definir funciones específicas para finalizar la compra en cada modal
+    function finalizarCompraModal1() {
+        alert('Finalizar compra en Modal 1');
+        // Lógica para finalizar la compra en Modal 1
+    }
+
+    function finalizarCompraModal2() {
+        alert('Finalizar compra en Modal 2');
+        // Lógica para finalizar la compra en Modal 2
+    }
+
+  </script>
+
+
+
+  <footer class="footer bg-gradient-dark pt-4">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-7">
+          <div class="row justify-content-center">
+            <div class=" text-center mx-auto my-auto">
+              <div class="p-3 warning-horizontal justify-content-center d-flex ">
+                <img class="avatar avatar-xl" src="assets/img/logo.jpg" alt="">
+                <h1 class="text-white ms-2 text-edo text-uppercase my-auto">Bendito perro</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-12 text-center my-auto justify-content-center">
+          <h5 class="text-edo text-warning">Contacto</h5>
+            <ul class="flex-column nav">
+              <li class="nav-item text-white">
+                📌Urb. Casa Carmelo 🍎 B 🏠 4 <br>
+
+                <p class="text-edo mb-4 text-sm text-white ">
+                  
+                  <span class="bg-white text-dark px-1 mt-1 card col-lg-8 col-sm-8 mx-auto">cocina oculta <br> Solo domiciolios</span>
+                </p>
+              </li>
+            </ul>
+        </div>
+
+        <div class="col-12 my-2 pt-1 border-top border-white text-center">
+          <a onclick="sebastian('👨‍💻 Hola, Quiero cotizar una pagina web para mi negocio ☺')"
+            class="text-sm text-white" style="cursor: pointer;">Sistema creado por <span class="link-warning">Sebastian Pitre.</span> </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- -------- END FOOTER 5 w/ DARK BACKGROUND ------- -->
+  <!--   Core JS Files   -->
+  <script src=" assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src=" assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src=" assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <!-- Control Center for Material UI Kit: parallax effect, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+  <script src=" assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.2.2/intro.min.js"></script>
+  <script src="assets/js/instrucciones.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="plan3.js"></script>
+
+  <script>
+    // Función para borrar todos los datos guardados en `localStorage`
+    function borrarLocalStorage() {
+        // Borra todos los datos de `localStorage`
+        localStorage.removeItem('carrito');
+        document.getElementById('carrito').innerText = 'Carrito vacío';
+        // Recarga la página
+        window.location.reload();
+    }
+    // Función para reproducir un sonido al agregar
+    function reproducirMas(urlSonidoMas) {
+        const sonido = new Audio(urlSonidoMas);
+        sonido.play()
+    }
+    // Función para reproducir un sonido al borrar
+    function reproducirMenos(urlSonidoMenos) {
+        const sonido = new Audio(urlSonidoMenos);
+        sonido.play()
+    }
+    // Función para reproducir un sonido al finalizar
+    function reproducirFin(urlSonidoFin) {
+        const sonido = new Audio(urlSonidoFin);
+        sonido.play()
+    }
+    // Puedes usar una URL local o remota
+    const urlSonidoMas = 'assets/audio/7.mp3';
+    const urlSonidoMenos = 'assets/audio/11.mp3';
+    const urlSonidoFin = 'assets/audio/6.mp3';
+
+  </script>
+</body>
 
 </html>
