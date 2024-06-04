@@ -271,16 +271,20 @@
           <button class="btn btn-sm btn-dark text-white" onclick="guardarDireccion()">Validar datos</button>
         </div>
         <p>Verifique los datos antes finalizar el pedido</p>
-        <div class="card bg-gray-200 border-1 border-dark pt-2">
-          
-          <p>Nombre: <span id="nombreMostrado"></span></p>
-          <p class="mt-n1">Dirección: <span id="direccionMostrada"></span></p>
-          <p class="mt-n1">Forma de pago: <span id="tipoPagoMostrado"></span></p>
+        <div class="card bg-gray-200 border-1 border-dark pt-1 ">
+           <p class="text-sm m-0"><b>Nombre:</b> <span id="nombreMostrado"></span>.</p> 
+           <p class="text-sm m-0"><b>Dirección:</b> <span id="direccionMostrada"></span>.</p>
+           <p class="text-sm m-0"><b>Forma de pago:</b> <span id="tipoPagoMostrado"></span>.</p>
         </div>
-        
 
-        <div class="col-12 mt-3 text-end">
+        
+      </div>
+
+      <div class="row text-center mb-n4 mt-4" >
+        <div class="col-6">
           <button id="closeModal2" class="btn btn-sm justify-content-end btn-danger">volver al carrito</button>
+        </div>
+        <div class="col-6">
           <button id="finalizarCompraBtn" class="btn btn-sm justify-content-end btn-warning" onclick="finalizarCompra()">Finalizar Pedido</button>
         </div>
       </div>

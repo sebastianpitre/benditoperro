@@ -457,20 +457,20 @@ function finalizarCompra() {
     // Agrega el nombre al mensaje de WhatsApp
     const nombre = document.getElementById('nombre').value;
     if (nombre) {
-        mensaje += `*Nombre de quien recibe:* ${nombre}.\n\n`;
+        mensaje += `*Nombre de quien recibe:* ${nombre}.\n`;
     }
     // Agrega la dirección al mensaje de WhatsApp
     const direccion = document.getElementById('direccion').value;
     if (direccion) {
-        mensaje += `*Dirección:* ${direccion}.\n\n`;
+        mensaje += `*Dirección:* ${direccion}.\n`;
     }
     // Agrega el nombre al mensaje de WhatsApp
     const tipoPago = document.getElementById('tipoPago').value;
     if (tipoPago) {
-        mensaje += `*Forma de pago:* ${tipoPago}.\n\n`;
+        mensaje += `*Forma de pago:* ${tipoPago}.\n`;
     }
     // Genera la URL para redirigir a WhatsApp
-    const url = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}Muchas gracias!`;
+    const url = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}\n...`;
     window.location.href = url; // Redirige a WhatsApp
     reproducirFin(urlSonidoFin)
 }
