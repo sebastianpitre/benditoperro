@@ -24,42 +24,42 @@ const productos = [
         nombre: 'EL GOLIAT',
         precio: 25000,
         imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: 'Pan de 40 cm, tocineta, chorizo, butifarra, queso costeño, pollo, lomo de cerdo, 4 salchichas artesanales, cebolla caramelizada, salsas.',
         categoria: 'perros'
     },
     {
         nombre: 'EL REDENTOR',
         precio: 15000,
         imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: 'Pan de orégano, tocineta, chorizo santa rosano, queso mozzarella, queso frito + adicción de papas.',
         categoria: 'perros'
     },
     {
         nombre: 'EL MESÍAS',
         precio: 15000,
         imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: 'Doble salchicha, tocineta, butifarra, queso mozzarella, carne de la casa + adicción de papas. ',
         categoria: 'perros'
     },
     {
         nombre: 'EL ARCA',
         precio: 15000,
         imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: 'Doble salchicha, tocineta, chorizo, butifarra, queso mozzarella + cebolla caramelizada.',
         categoria: 'perros'
     },
     {
         nombre: 'EL BENDITO',
         precio: 8000,
         imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: 'Salchicha, tocineta, queso mozzarella, cebolla caramelizada.',
         categoria: 'perros'
     },
     {
         nombre: 'GENESIS',
         precio: 5000,
         imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: 'Salchicha, salsas, queso mozzarella.',
         categoria: 'perros'
     },
 
@@ -69,14 +69,14 @@ const productos = [
         nombre: 'HAMBURGUESA GENESIS',
         precio: 10000,
         imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: 'Carne de la casa, jamon, queso mozzarella, lechuga, papa ripio, cebolla caramelizada + porcion de papas.',
         categoria: 'hamburguesas'
     },
     {
         nombre: '2 DE GENESIS',
         precio: 16000,
         imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: 'Doble carne de la casa, jamon, queso mozzarella, tocineta, lechuga, papa ripio, cebolla caramelizada + porcion de papas.',
         categoria: 'hamburguesas'
     },
 
@@ -85,21 +85,21 @@ const productos = [
         nombre: 'LA GENESIS',
         precio: 10000,
         imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: 'Papas francesa, salchicha, lechuga, ripio, queso costeño, salsas de la casa',
         categoria: 'salchipapas'
     },
     {
         nombre: 'LA SANTA',
         precio: 13000,
         imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: 'Papas francesa, salchicha, chorizo, pollo, lomo de cerdo, butifarra, lechuga, ripio, queso costeño, salsas de la casa',
         categoria: 'salchipapas'
     },
     {
         nombre: 'LA BENDITA',
         precio: 17000,
         imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: 'Papas francesa, salchicha, chorizo, pollo, lomo de cerdo, butifarra, lechuga, ripio, queso costeño, salsas de la casa',
         categoria: 'salchipapas'
 
     },
@@ -107,59 +107,59 @@ const productos = [
         nombre: 'LA BENDICIÓN',
         precio: 25000,
         imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: 'Papas francesa, salchicha, chorizo, butifarra, pollo, lomo de cerdo, tocineta, lechuga, ripio, queso costeño, salsas de la casa, DOS PERSONAS.',
         categoria: 'salchipapas'
     },
     
 
-    // Jugos
+    // BEBIDAS
     {
         nombre: 'COCA COLA 1.5L',
         precio: 6000,
         imagen: 'assets/img/product/no-bebida.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: '',
         categoria: 'jugos'
     },
     {
         nombre: 'POSTOBON 1L',
         precio: 4000,
         imagen: 'assets/img/product/no-bebida.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: '',
         categoria: 'jugos'
     },
     {
         nombre: 'COCA COLA P400',
         precio: 3000,
         imagen: 'assets/img/product/no-bebida.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: '',
         categoria: 'jugos'
     },
     {
         nombre: 'POSTOBON P400',
         precio: 3000,
         imagen: 'assets/img/product/no-bebida.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: '',
         categoria: 'jugos'
     },
     {
         nombre: 'CUANTRO P400',
         precio: 3000,
         imagen: 'assets/img/product/no-bebida.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: '',
         categoria: 'jugos'
     },
     {
         nombre: 'AGUA SABORISADA',
         precio: 2000,
         imagen: 'assets/img/product/no-bebida.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: '',
         categoria: 'jugos'
     },
     {
         nombre: 'AGUA PEQUEÑA',
         precio: 1000,
         imagen: 'assets/img/product/no-bebida.jpg',
-        descripcion: 'descipcion del producto',
+        descripcion: '',
         categoria: 'jugos'
     },
     
@@ -187,11 +187,18 @@ function cargarCarrito() {
         document.getElementById('nombreMostrado').textContent = nombreGuardado;
     }
 
-    // Cargar el nombre desde `localStorage`
+    // Cargar el tipoPago desde `localStorage`
     const tipoPagoGuardado = localStorage.getItem('tipoPago');
     if (tipoPagoGuardado) {
         document.getElementById('tipoPago').value = tipoPagoGuardado;
         document.getElementById('tipoPagoMostrado').textContent = tipoPagoGuardado;
+    }
+
+    // Cargar el telefono desde `localStorage`
+    const telefonoGuardado = localStorage.getItem('telefono');
+    if (telefonoGuardado) {
+        document.getElementById('telefono').value = telefonoGuardado;
+        document.getElementById('telefonoMostrado').textContent = telefonoGuardado;
     }
 }
 
@@ -203,6 +210,8 @@ function guardarDireccion() {
     document.getElementById('direccionMostrada').textContent = `${direccion}`;
     guardarNombre()
     guardarTipoPago()
+    guardarTelefono()
+
 }
 
 // Guardar solo el nombre en `localStorage`
@@ -221,6 +230,13 @@ function guardarTipoPago() {
     document.getElementById('tipoPagoMostrado').textContent = `${tipoPago}`;
 }
 
+// Guardar solo el telefono en `localStorage`
+function guardarTelefono() {
+    const telefono = document.getElementById('telefono').value;
+    localStorage.setItem('telefono', telefono);
+    // Muestra el telefono en el elemento con ID `telefonoMostrado`
+    document.getElementById('telefonoMostrado').textContent = `${telefono}`;
+}
 
 // Guardar el carrito en `localStorage`
 function guardarCarrito() {
@@ -266,8 +282,8 @@ function crearProductos() {
                     </div>
                     <div class="text-start ms-2">
                         <p class="text-dark font-weight-bold mb-0">${producto.nombre}</p>
-                        <span class="text-sm">${producto.descripcion}</span>
-                        <p class="text-success">$ ${producto.precio}</p>
+                        <span class="" ><p style="font-size:12px;"> ${producto.descripcion}</p></span>
+                        <p class="text-success mt-n3">$ ${producto.precio}</p>
                         <div class="agregar mt-n3">
                             <button class="btn btn-sm btn-warning" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">Agregar al carrito</button>
                         </div>
@@ -464,11 +480,17 @@ function finalizarCompra() {
     if (direccion) {
         mensaje += `*Dirección:* ${direccion}.\n`;
     }
-    // Agrega el nombre al mensaje de WhatsApp
+    // Agrega el telefono al mensaje de WhatsApp
+    const telefono = document.getElementById('telefono').value;
+    if (telefono) {
+        mensaje += `*Teléfono:* ${telefono}.\n`;
+    }
+    // Agrega el tipoPago al mensaje de WhatsApp
     const tipoPago = document.getElementById('tipoPago').value;
     if (tipoPago) {
         mensaje += `*Forma de pago:* ${tipoPago}.\n`;
     }
+    
     // Genera la URL para redirigir a WhatsApp
     const url = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}\n...`;
     window.location.href = url; // Redirige a WhatsApp
