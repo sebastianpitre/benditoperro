@@ -194,6 +194,13 @@ function cargarCarrito() {
         document.getElementById('tipoPagoMostrado').textContent = tipoPagoGuardado;
     }
 
+    // Cargar el domicilio desde `localStorage`
+    const guardardomicilio = localStorage.getItem('domicilio');
+    if (guardardomicilio) {
+        document.getElementById('domicilio').value = guardardomicilio;
+        document.getElementById('domicilioMostrado').textContent = guardardomicilio;
+    }
+
     // Cargar el telefono desde `localStorage`
     const telefonoGuardado = localStorage.getItem('telefono');
     if (telefonoGuardado) {
@@ -211,7 +218,7 @@ function guardarDireccion() {
     guardarNombre()
     guardarTipoPago()
     guardarTelefono()
-
+    guardardomicilio()
 }
 
 // Guardar solo el nombre en `localStorage`
@@ -228,6 +235,14 @@ function guardarTipoPago() {
     localStorage.setItem('tipoPago', tipoPago);
     // Muestra el tipoPago en el elemento con ID `tipoPagoMostrado`
     document.getElementById('tipoPagoMostrado').textContent = `${tipoPago}`;
+}
+
+// Guardar solo el domicilio en `localStorage`
+function guardardomicilio() {
+    const domicilio = document.getElementById('domicilio').value;
+    localStorage.setItem('domicilio', domicilio);
+    // Muestra el domicilio en el elemento con ID `domicilioMostrado`
+    document.getElementById('domicilioMostrado').textContent = `${domicilio}`;
 }
 
 // Guardar solo el telefono en `localStorage`
@@ -489,6 +504,11 @@ function finalizarCompra() {
     const tipoPago = document.getElementById('tipoPago').value;
     if (tipoPago) {
         mensaje += `*Forma de pago:* ${tipoPago}.\n`;
+    }
+    // Agrega el domicilio al mensaje de WhatsApp
+    const domicilio = document.getElementById('domicilio').value;
+    if (domicilio) {
+        mensaje += `*Domicilio:* ${domicilio}.\n`;
     }
     
     // Genera la URL para redirigir a WhatsApp

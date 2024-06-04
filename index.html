@@ -31,6 +31,8 @@
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
   <!-- Facebook Pixel Code -->
+
+  <!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -40,12 +42,13 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', 'TU_ID_DE_PIXEL');
+  fbq('init', '1182157506305777');
   fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=TU_ID_DE_PIXEL&ev=PageView&noscript=1"
+  src="https://www.facebook.com/tr?id=1182157506305777&ev=PageView&noscript=1"
   /></noscript>
+  <!-- End Meta Pixel Code -->
   <!-- End Facebook Pixel Code -->
   
 </head>
@@ -291,6 +294,14 @@
               <option value="Transferencia">Transferencia</option>
           </select>
         </div>
+        <div class="col-lg-6 mt-2">
+          <label class="text-warning  font-weight-bold">¿Quiere domicilio?</label>
+
+          <select  class="form-select mt-n2 p-2 border" aria-label="Selecciona una opción" id="domicilio">
+              <option value="No">No</option>
+              <option value="si (Valor por aparte)">Si</option>
+          </select>
+        </div>
         
         <div class="col-auto col-12 mt-2">
           <button class="btn btn-sm btn-dark text-white" onclick="guardarDireccion()">Validar datos</button>
@@ -301,6 +312,7 @@
            <p class="text-sm m-0"><b class="text-warning">Dirección:</b> <span id="direccionMostrada"></span>.</p>
            <p class="text-sm m-0"><b class="text-warning">Telefono:</b> <span id="telefonoMostrado"></span>.</p>
            <p class="text-sm m-0"><b class="text-warning">Forma de pago:</b> <span id="tipoPagoMostrado"></span>.</p>
+           <p class="text-sm m-0"><b class="text-warning">Domicilio:</b> <span id="domicilioMostrado"></span>.</p>
         </div>
 
         
