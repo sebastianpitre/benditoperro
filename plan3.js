@@ -18,7 +18,7 @@ const productos = [
         categoria: 'promos'
     },
     {
-        nombre: 'Combo de 3 variados',
+        nombre: 'Combo bendito',
         precio: 25000,
         imagen: 'assets/img/product/variado.jpeg',
         descripcion: 'El Combo contiene, 1 salchipapa, 1 perro y 1 hamburguesa al mejor precio',
