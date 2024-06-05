@@ -99,7 +99,7 @@ const productos = [
         nombre: 'LA SANTA',
         precio: 13000,
         imagen: 'assets/img/product/no-imagen.jpeg',
-        descripcion: 'Papas francesa, salchicha, chorizo, pollo, lomo de cerdo, butifarra, lechuga, ripio, queso costeño, salsas de la casa',
+        descripcion: 'Papas francesa, salchicha, chorizo, butifarra, lechuga, ripio, queso costeño, salsas de la casa',
         categoria: 'salchipapas'
     },
     {
