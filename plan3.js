@@ -4,17 +4,24 @@ let carrito = [];
 // Lista de productos disponibles con nombre, precio, imagen y categoría
 const productos = [
     {
-        nombre: 'COMBO 2x1',
-        precio: 18000,
-        imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        nombre: 'Combo de perros x4',
+        precio: 30000,
+        imagen: 'assets/img/product/perrosx4.jpeg',
+        descripcion: '4 perros version mini de diferentes sabores: carne de la casa, tocineta, maíz, jamon, + ingredientes de la casa.',
         categoria: 'promos'
     },
     {
-        nombre: 'COMBO ESPECIAL',
+        nombre: 'Hamburguesas x3 + gaseosa',
+        precio: 30000,
+        imagen: 'assets/img/product/hambx3.jpeg',
+        descripcion: '3 deliciosas hamburguesas + 1 gaseosa litro (No incluye papas)',
+        categoria: 'promos'
+    },
+    {
+        nombre: 'Combo de 3 variados',
         precio: 25000,
-        imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'descipcion del producto',
+        imagen: 'assets/img/product/variado.jpeg',
+        descripcion: 'El Combo contiene, 1 salchipapa, 1 perro y 1 hamburguesa al mejor precio',
         categoria: 'promos'
     },
 
@@ -23,42 +30,42 @@ const productos = [
     {
         nombre: 'EL GOLIAT',
         precio: 25000,
-        imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'Pan de 40 cm, tocineta, chorizo, butifarra, queso costeño, pollo, lomo de cerdo, 4 salchichas artesanales, cebolla caramelizada, salsas.',
+        imagen: 'assets/img/product/no-imagen.jpeg',
+        descripcion: '(2-3 🙍‍♂️) Pan de 40 cm, tocineta, chorizo, butifarra, queso costeño, pollo, lomo de cerdo, 4 salchichas artesanales, cebolla caramelizada, salsas. ',
         categoria: 'perros'
     },
     {
         nombre: 'EL REDENTOR',
         precio: 15000,
-        imagen: 'assets/img/product/no-imagen.jpg',
+        imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Pan de orégano, tocineta, chorizo santa rosano, queso mozzarella, queso frito + adicción de papas.',
         categoria: 'perros'
     },
     {
         nombre: 'EL MESÍAS',
         precio: 15000,
-        imagen: 'assets/img/product/no-imagen.jpg',
+        imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Doble salchicha, tocineta, butifarra, queso mozzarella, carne de la casa + adicción de papas. ',
         categoria: 'perros'
     },
     {
         nombre: 'EL ARCA',
         precio: 15000,
-        imagen: 'assets/img/product/no-imagen.jpg',
+        imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Doble salchicha, tocineta, chorizo, butifarra, queso mozzarella + cebolla caramelizada.',
         categoria: 'perros'
     },
     {
         nombre: 'EL BENDITO',
         precio: 8000,
-        imagen: 'assets/img/product/no-imagen.jpg',
+        imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Salchicha, tocineta, queso mozzarella, cebolla caramelizada.',
         categoria: 'perros'
     },
     {
         nombre: 'GENESIS',
         precio: 5000,
-        imagen: 'assets/img/product/no-imagen.jpg',
+        imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Salchicha, salsas, queso mozzarella.',
         categoria: 'perros'
     },
@@ -68,37 +75,37 @@ const productos = [
     {
         nombre: 'HAMBURGUESA GENESIS',
         precio: 10000,
-        imagen: 'assets/img/product/no-imagen.jpg',
+        imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Carne de la casa, jamon, queso mozzarella, lechuga, papa ripio, cebolla caramelizada + porcion de papas.',
         categoria: 'hamburguesas'
     },
     {
         nombre: '2 DE GENESIS',
         precio: 16000,
-        imagen: 'assets/img/product/no-imagen.jpg',
-        descripcion: 'Doble carne de la casa, jamon, queso mozzarella, tocineta, lechuga, papa ripio, cebolla caramelizada + porcion de papas.',
+        imagen: 'assets/img/product/no-imagen.jpeg',
+        descripcion: '(Hamburguesa doble) Doble carne de la casa, jamon, queso mozzarella, tocineta, lechuga, papa ripio, cebolla caramelizada + porcion de papas.',
         categoria: 'hamburguesas'
     },
 
     // Salchipapas
     {
-        nombre: 'LA GENESIS',
+        nombre: 'LA GENESIS (Sencilla)',
         precio: 10000,
-        imagen: 'assets/img/product/no-imagen.jpg',
+        imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Papas francesa, salchicha, lechuga, ripio, queso costeño, salsas de la casa',
         categoria: 'salchipapas'
     },
     {
         nombre: 'LA SANTA',
         precio: 13000,
-        imagen: 'assets/img/product/no-imagen.jpg',
+        imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Papas francesa, salchicha, chorizo, pollo, lomo de cerdo, butifarra, lechuga, ripio, queso costeño, salsas de la casa',
         categoria: 'salchipapas'
     },
     {
         nombre: 'LA BENDITA',
         precio: 17000,
-        imagen: 'assets/img/product/no-imagen.jpg',
+        imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Papas francesa, salchicha, chorizo, pollo, lomo de cerdo, butifarra, lechuga, ripio, queso costeño, salsas de la casa',
         categoria: 'salchipapas'
 
@@ -106,7 +113,7 @@ const productos = [
     {
         nombre: 'LA BENDICIÓN',
         precio: 25000,
-        imagen: 'assets/img/product/no-imagen.jpg',
+        imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Papas francesa, salchicha, chorizo, butifarra, pollo, lomo de cerdo, tocineta, lechuga, ripio, queso costeño, salsas de la casa, DOS PERSONAS.',
         categoria: 'salchipapas'
     },
@@ -207,6 +214,13 @@ function cargarCarrito() {
         document.getElementById('telefono').value = telefonoGuardado;
         document.getElementById('telefonoMostrado').textContent = telefonoGuardado;
     }
+
+    // Cargar la observacion desde `localStorage`
+    const observacionGuardado = localStorage.getItem('observacion');
+    if (observacionGuardado) {
+        document.getElementById('observacion').value = observacionGuardado;
+        document.getElementById('observacionMostrado').textContent = observacionGuardado;
+    }
 }
 
 // Guardar solo la dirección en `localStorage`
@@ -219,6 +233,7 @@ function guardarDireccion() {
     guardarTipoPago()
     guardarTelefono()
     guardardomicilio()
+    guardarObservacion()
 }
 
 // Guardar solo el nombre en `localStorage`
@@ -251,6 +266,14 @@ function guardarTelefono() {
     localStorage.setItem('telefono', telefono);
     // Muestra el telefono en el elemento con ID `telefonoMostrado`
     document.getElementById('telefonoMostrado').textContent = `${telefono}`;
+}
+
+// Guardar solo la observacion en `localStorage`
+function guardarObservacion() {
+    const observacion = document.getElementById('observacion').value;
+    localStorage.setItem('observacion', observacion);
+    // Muestra el observacion en el elemento con ID `observacionMostrado`
+    document.getElementById('observacionMostrado').textContent = `${observacion}`;
 }
 
 // Guardar el carrito en `localStorage`
@@ -510,7 +533,11 @@ function finalizarCompra() {
     if (domicilio) {
         mensaje += `*Domicilio:* ${domicilio}.\n`;
     }
-    
+    // Agrega la observacion al mensaje de WhatsApp
+    const observacion = document.getElementById('observacion').value;
+    if (observacion) {
+        mensaje += `*observación:* ${observacion}.\n`;
+    }
     // Genera la URL para redirigir a WhatsApp
     const url = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}\n...`;
     window.location.href = url; // Redirige a WhatsApp
