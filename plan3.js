@@ -5,7 +5,7 @@ let carrito = [];
 const productos = [
     {
         nombre: 'Combo de perros x4',
-        precio: 30000,
+        precio: 20000,
         imagen: 'assets/img/product/perrosx4.jpeg',
         descripcion: '4 perros version mini de diferentes sabores: carne de la casa, tocineta, maíz, jamon, + ingredientes de la casa.',
         categoria: 'promos'
@@ -123,49 +123,49 @@ const productos = [
     {
         nombre: 'COCA COLA 1.5L',
         precio: 6000,
-        imagen: 'assets/img/product/no-bebida.jpg',
+        imagen: 'assets/img/product/coca1.5.jpg',
         descripcion: '',
         categoria: 'jugos'
     },
     {
         nombre: 'POSTOBON 1L',
         precio: 4000,
-        imagen: 'assets/img/product/no-bebida.jpg',
+        imagen: 'assets/img/product/postobon1l.jpg',
         descripcion: '',
         categoria: 'jugos'
     },
     {
         nombre: 'COCA COLA P400',
         precio: 3000,
-        imagen: 'assets/img/product/no-bebida.jpg',
+        imagen: 'assets/img/product/cocap400.jpg',
         descripcion: '',
         categoria: 'jugos'
     },
     {
         nombre: 'POSTOBON P400',
         precio: 3000,
-        imagen: 'assets/img/product/no-bebida.jpg',
+        imagen: 'assets/img/product/postobonp400.jpg',
         descripcion: '',
         categoria: 'jugos'
     },
     {
-        nombre: 'CUANTRO P400',
+        nombre: 'QUATRO P400',
         precio: 3000,
-        imagen: 'assets/img/product/no-bebida.jpg',
+        imagen: 'assets/img/product/quatrop400.webp',
         descripcion: '',
         categoria: 'jugos'
     },
     {
         nombre: 'AGUA SABORISADA',
         precio: 2000,
-        imagen: 'assets/img/product/no-bebida.jpg',
+        imagen: 'assets/img/product/aguasabor.jpg',
         descripcion: '',
         categoria: 'jugos'
     },
     {
         nombre: 'AGUA PEQUEÑA',
         precio: 1000,
-        imagen: 'assets/img/product/no-bebida.jpg',
+        imagen: 'assets/img/product/aguap300.jpg',
         descripcion: '',
         categoria: 'jugos'
     },
