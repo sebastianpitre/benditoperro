@@ -146,7 +146,7 @@
           <a href="#set4" class="col-5 mt-1 col-sm-3 mx-1 border border-radius-2xl text-white bg-gradient-dark text-center text-sm text-edo">
             salchipapas
           </a>
-          <a href="#set5" class="col-3 mt-1 col-sm-3 mx-1 border border-radius-2xl text-white bg-gradient-dark text-center text-sm text-edo">
+          <a href="#set5" class="col-4 mt-1 col-sm-3 mx-1 border border-radius-2xl text-white bg-gradient-dark text-center text-sm text-edo">
             bebidas
           </a>
         </div>
@@ -179,6 +179,16 @@
         <h2 class="text-warning text-edo">bebidas</h2>
       </div>
       <div class="row" id="jugos"></div>
+
+
+      <div class="position-fixed" style="right: 10px; bottom: 50px; z-index: 9999;">
+        <a onclick="contacto('Hola...')" class="text-sm text-white" style="cursor: pointer;">
+          <button type="button" class="btn btn-sm pt-0 pb-0 px-0">
+            <img class="icon-sm" src="images/Whatsapp.png" alt="">
+          </button>
+        </a>
+          
+      </div>
 
       <div class="position-fixed " style="right: 10px; bottom: 10px; z-index: 9999;">
         <button type="button" class="btn btn-sm pt-0 pb-0 px-2 border border-white btn-warning" id="openModal1">
@@ -427,9 +437,17 @@
   </footer>
 
   <script>
-    function sebastian(mensaje) {
+  function sebastian(mensaje) {
     // Reemplaza "1234567890" con el número al que deseas enviar el mensaje
     var numeroEmpresa = "+573117888631";
+    var mensajeWhatsappEmpresa = encodeURIComponent(mensaje);
+    var url = "https://wa.me/" + numeroEmpresa + "?text=" + mensajeWhatsappEmpresa;
+    window.open(url);
+  }
+
+  function contacto(mensaje) {
+    // Reemplaza "1234567890" con el número al que deseas enviar el mensaje
+    var numeroEmpresa = "+573217342066";
     var mensajeWhatsappEmpresa = encodeURIComponent(mensaje);
     var url = "https://wa.me/" + numeroEmpresa + "?text=" + mensajeWhatsappEmpresa;
     window.open(url);
