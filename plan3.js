@@ -497,7 +497,7 @@ function finalizarCompra() {
     const numeroTelefono = '+573217342066'; // Reemplaza este número con el deseado
 
     
-    let mensaje = '📌*¡Hola! Quiero comprar los siguientes productos:*\n\n';
+    let mensaje = '*¡Hola! Quiero comprar los siguientes productos:*\n\n';
     
     // Itera sobre el carrito y crea el mensaje
     carrito.forEach((producto, index) => {
@@ -538,8 +538,9 @@ function finalizarCompra() {
     if (observacion) {
         mensaje += `*observación:* ${observacion}.\n`;
     }
-    // Genera la URL para redirigir a WhatsApp
-    const url = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}\n...`;
-    window.location.href = url; // Redirige a WhatsApp
+
+    const url = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+
     reproducirFin(urlSonidoFin)
 }
