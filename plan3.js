@@ -494,7 +494,7 @@ function mostrarCarrito() {
 
 // Función para finalizar la compra y redirigir a WhatsApp
 function finalizarCompra() {
-    const numeroTelefono = '+573217342066'; // Reemplaza este número con el deseado
+    const numeroTelefono = '3217342066'; // Reemplaza este número con el deseado
 
     
     let mensaje = '*¡Hola! Quiero comprar los siguientes productos:*\n\n';
