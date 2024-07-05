@@ -76,7 +76,7 @@ const productos = [
         nombre: 'HAMBURGUESA GENESIS',
         precio: 10000,
         imagen: 'assets/img/product/no-imagen.jpeg',
-        descripcion: 'Carne de la casa, jamon, queso mozzarella, lechuga, papa ripio, cebolla caramelizada + porcion de papas.',
+        descripcion: 'Carne de la casa, jamon, queso mozzarella, lechuga, papa ripio y cebolla caramelizada',
         categoria: 'hamburguesas'
     },
     {
