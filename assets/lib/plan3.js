@@ -4,84 +4,98 @@ let carrito = [];
 // Lista de productos disponibles con nombre, precio, imagen y categoría
 const productos = [
     {
-        nombre: 'Combo de perros x4',
+        nombre: 'COMBO DE PERROS x4',
         precio: 20000,
         imagen: 'assets/img/product/perrosx4.jpeg',
-        descripcion: '4 perros version mini de diferentes sabores: carne de la casa, tocineta, maíz, jamon, + ingredientes de la casa.',
+        descripcion: '4 perros version MINI de diferentes sabores: carne de la casa, tocineta, maíz, jamon, + ingredientes de la casa.',
         categoria: 'promos'
     },
     {
-        nombre: 'Hamburguesas x3 + gaseosa',
+        nombre: 'HAMBURGUESAS x3',
         precio: 30000,
         imagen: 'assets/img/product/hambx3.jpeg',
         descripcion: '3 deliciosas hamburguesas + 1 gaseosa litro (No incluye papas)',
         categoria: 'promos'
     },
     {
-        nombre: 'Combo bendito',
+        nombre: 'COMBO BENDITO x3',
         precio: 25000,
         imagen: 'assets/img/product/variado.jpeg',
-        descripcion: 'El Combo contiene, 1 salchipapa, 1 perro y 1 hamburguesa al mejor precio',
+        descripcion: 'El Combo contiene, 1 salchipapa, 1 perro y 1 hamburguesa ¡Al mejor precio!',
         categoria: 'promos'
     },
 
 
     // Perros
     {
-        nombre: 'EL GOLIAT',
-        precio: 25000,
+        nombre: 'EL GOLIAT (40cm)',
+        precio: 30000,
         imagen: 'assets/img/product/no-imagen.jpeg',
-        descripcion: '(2-3 🙍‍♂️) Pan de 40 cm, tocineta, chorizo, butifarra, queso costeño, pollo, lomo de cerdo, 4 salchichas artesanales, cebolla caramelizada, salsas. ',
+        descripcion: '(2-3) Pan de 40 cm, tocineta, chorizo, butifarra, queso costeño, pollo, lomo de cerdo, 4 salchichas artesanales, cebolla caramelizada, salsas. ',
         categoria: 'perros'
     },
     {
         nombre: 'EL REDENTOR',
         precio: 15000,
         imagen: 'assets/img/product/no-imagen.jpeg',
-        descripcion: 'Pan de orégano, tocineta, chorizo santa rosano, queso mozzarella, queso frito + adicción de papas.',
+        descripcion: 'Pan de orégano, tocineta, chorizo santa rosano, queso mozzarella, queso frito + adicción de papas, salsas.',
         categoria: 'perros'
     },
     {
         nombre: 'EL MESÍAS',
         precio: 15000,
         imagen: 'assets/img/product/no-imagen.jpeg',
-        descripcion: 'Doble salchicha, tocineta, butifarra, queso mozzarella, carne de la casa + adicción de papas. ',
+        descripcion: 'Doble salchicha, tocineta, butifarra, queso mozzarella, carne de la casa + adicción de papas - salsas. ',
         categoria: 'perros'
     },
     {
         nombre: 'EL ARCA',
         precio: 15000,
         imagen: 'assets/img/product/no-imagen.jpeg',
-        descripcion: 'Doble salchicha, tocineta, chorizo, butifarra, queso mozzarella + cebolla caramelizada.',
+        descripcion: 'Doble salchicha, tocineta, chorizo, butifarra, queso mozzarella, cebolla caramelizada + porción de papas.',
         categoria: 'perros'
     },
     {
         nombre: 'EL BENDITO',
-        precio: 8000,
+        precio: 9000,
         imagen: 'assets/img/product/no-imagen.jpeg',
-        descripcion: 'Salchicha, tocineta, queso mozzarella, cebolla caramelizada.',
+        descripcion: 'Salchicha, tocineta, queso mozzarella, cebolla caramelizada - salsas.',
         categoria: 'perros'
     },
     {
-        nombre: 'GENESIS',
-        precio: 5000,
+        nombre: 'GÉNESIS',
+        precio: 6000,
         imagen: 'assets/img/product/no-imagen.jpeg',
-        descripcion: 'Salchicha, salsas, queso mozzarella.',
+        descripcion: 'Perro sencillo salchicha, salsas, queso mozzarella.',
+        categoria: 'perros'
+    },
+    {
+        nombre: 'EL GOLIAT 2.0',
+        precio: 30000,
+        imagen: 'assets/img/product/no-imagen.jpeg',
+        descripcion: '(2-3) Chorizo santa rosano, pollo y carne de la casa, cebolla caramelizada, queso mozzarella, maíz, tocineta, salsas de la casa, chorizo y butifarra',
         categoria: 'perros'
     },
 
 
     // HAMBURGUESAS
     {
-        nombre: 'HAMBURGUESA GENESIS',
-        precio: 10000,
+        nombre: 'BURGER GÉNESIS',
+        precio: 11000,
         imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Carne de la casa, jamon, queso mozzarella, lechuga, papa ripio y cebolla caramelizada',
         categoria: 'hamburguesas'
     },
     {
-        nombre: '2 DE GENESIS',
-        precio: 16000,
+        nombre: '2 DE BURGUER GÉNESIS',
+        precio: 17000,
+        imagen: 'assets/img/product/no-imagen.jpeg',
+        descripcion: '(Hamburguesa doble) Doble carne de la casa, jamon, queso mozzarella, tocineta, lechuga, papa ripio, cebolla caramelizada + porcion de papas.',
+        categoria: 'hamburguesas'
+    },
+    {
+        nombre: 'HAMBURGUESA / 2BLE',
+        precio: 18000,
         imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: '(Hamburguesa doble) Doble carne de la casa, jamon, queso mozzarella, tocineta, lechuga, papa ripio, cebolla caramelizada + porcion de papas.',
         categoria: 'hamburguesas'
@@ -89,39 +103,46 @@ const productos = [
 
     // Salchipapas
     {
-        nombre: 'LA GENESIS (Sencilla)',
-        precio: 10000,
+        nombre: 'LA GÉNESIS (SENCILLA)',
+        precio: 11000,
         imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Papas francesa, salchicha, lechuga, ripio, queso costeño, salsas de la casa',
         categoria: 'salchipapas'
     },
     {
-        nombre: 'LA SANTA',
-        precio: 13000,
+        nombre: 'LA SANTA (MIXTA)',
+        precio: 14000,
         imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Papas francesa, salchicha, chorizo, butifarra, lechuga, ripio, queso costeño, salsas de la casa',
         categoria: 'salchipapas'
     },
     {
-        nombre: 'LA BENDITA',
-        precio: 17000,
+        nombre: 'LA BENDITA (MIXTA)',
+        precio: 18000,
         imagen: 'assets/img/product/no-imagen.jpeg',
         descripcion: 'Papas francesa, salchicha, chorizo, pollo, lomo de cerdo, butifarra, lechuga, ripio, queso costeño, salsas de la casa',
         categoria: 'salchipapas'
 
     },
     {
-        nombre: 'LA BENDICIÓN',
-        precio: 25000,
+        nombre: 'LA BENDICIÓN (2/P)',
+        precio: 27000,
         imagen: 'assets/img/product/no-imagen.jpeg',
-        descripcion: 'Papas francesa, salchicha, chorizo, butifarra, pollo, lomo de cerdo, tocineta, lechuga, ripio, queso costeño, salsas de la casa, DOS PERSONAS.',
+        descripcion: 'Papas francesa, salchicha, chorizo, butifarra, pollo, lomo de cerdo, tocineta, lechuga, ripio, queso costeño, salsas de la casa, ¡2 PERSONAS!',
+        categoria: 'salchipapas'
+    },
+    {
+        nombre: 'LA 3 QUESOS (4/P)',
+        precio: 50000,
+        imagen: 'assets/img/product/no-imagen.jpeg',
+        descripcion: 'Papas francesa, salchicha, chorizo, pollo, lomo de cerdo, butifarra, lechuga, ripio, queso costeño, queso asado, queso mozzarella + salsas de la casa.',
         categoria: 'salchipapas'
     },
     
 
     // BEBIDAS
     {
-        nombre: 'COCA COLA 1.5L',
+        nombre: 'COCA-COLA 1.5L',
         precio: 6000,
         imagen: 'assets/img/product/coca1.5.jpg',
         descripcion: '',
@@ -135,7 +156,7 @@ const productos = [
         categoria: 'jugos'
     },
     {
-        nombre: 'COCA COLA P400',
+        nombre: 'COCA-COLA P400',
         precio: 3000,
         imagen: 'assets/img/product/cocap400.jpg',
         descripcion: '',
@@ -163,7 +184,7 @@ const productos = [
         categoria: 'jugos'
     },
     {
-        nombre: 'AGUA PEQUEÑA',
+        nombre: 'AGUA PQ / 300ML',
         precio: 1000,
         imagen: 'assets/img/product/aguap300.jpg',
         descripcion: '',
@@ -316,11 +337,11 @@ function crearProductos() {
             <div class="card mb-3 boton py-2">
                 <div class="d-flex align-items-center my-auto">
                     <div class="author">
-                        <img src="${producto.imagen}" alt="${producto.nombre}" class="border-radius-lg shadow ms-2" style="width: 120px; height: 120px;">
+                        <img src="${producto.imagen}" alt="${producto.nombre}" class="border-radius-lg shadow ms-2" style="width: 115px; height: 115px;">
                     </div>
                     <div class="text-start ms-2">
                         <p class="text-dark font-weight-bold mb-0">${producto.nombre}</p>
-                        <span class="" ><p style="font-size:12px;"> ${producto.descripcion}</p></span>
+                        <span class="" ><p style="font-size:12px;padding-right:7px"> ${producto.descripcion}</p></span>
                         <p class="text-success mt-n3">$ ${producto.precio}</p>
                         <div class="agregar mt-n3">
                             <button class="btn btn-sm btn-warning" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">Agregar al carrito</button>
@@ -544,3 +565,39 @@ function finalizarCompra() {
 
     reproducirFin(urlSonidoFin)
 }
+
+
+// Hora de apertura y cierre con horas y minutos específicos
+
+function checkStoreStatus() {
+    
+    const openingHour = 17;  // 17:30 (5:30 PM)
+    const openingMinute = 30;
+    const closingHour = 23;  // 23:30 (11:30 PM)
+    const closingMinute = 30;
+
+    const now = new Date();
+    const currentHour = now.getHours();
+    const currentMinute = now.getMinutes();
+
+    const statusButton = document.getElementById('statusButton');
+    const statusCircle = document.getElementById('statusCircle');
+    const statusText = document.getElementById('statusText');
+
+    // Verificar si está abierto o cerrado
+    const isOpen = (currentHour > openingHour || (currentHour === openingHour && currentMinute >= openingMinute)) &&
+                   (currentHour < closingHour || (currentHour === closingHour && currentMinute < closingMinute));
+
+    if (isOpen) {
+        statusCircle.classList.add('open');
+        statusText.textContent = 'Abierto';
+    } else {
+        statusCircle.classList.add('closed');
+        statusText.textContent = 'Cerrado';
+    }
+}
+
+checkStoreStatus();
+
+// Comprobar el estado cada minuto
+setInterval(checkStoreStatus, 60000); // 60000 milisegundos = 1 minuto

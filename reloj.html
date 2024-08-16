@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .status-button {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 15px;
+            background-color: #f0f0f0;
+            border: none;
+            color: #333;
+            font-size: 1rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .status-circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .open {
+            background-color: green;
+        }
+
+        .closed {
+            background-color: red;
+        }
+
+        /* Efecto de desvanecimiento y expansión hacia afuera */
+        @keyframes expandFade {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 20px 15px rgba(0, 255, 0, 0);
+            }
+        }
+
+        /* Aplicar la animación al botón */
+        .status-button {
+            animation: expandFade 2s infinite;
+        }
+    </style>
+    <title>Estado del Local</title>
+</head>
+<body>
+    <button id="statusButton" class="status-button">
+        <span id="statusCircle" class="status-circle"></span>
+        <span id="statusText">Cargando...</span>
+    </button>
+
+    <script>
+        function checkStoreStatus() {
+            // Hora de apertura y cierre con horas y minutos específicos
+            const openingHour = 16;  // 16:10 (4:10 PM)
+            const openingMinute = 10;
+            const closingHour = 18;  // 18:30 (6:30 PM)
+            const closingMinute = 30;
+
+            const now = new Date();
+            const currentHour = now.getHours();
+            const currentMinute = now.getMinutes();
+
+            const statusButton = document.getElementById('statusButton');
+            const statusCircle = document.getElementById('statusCircle');
+            const statusText = document.getElementById('statusText');
+
+            // Verificar si está abierto o cerrado
+            const isOpen = (currentHour > openingHour || (currentHour === openingHour && currentMinute >= openingMinute)) &&
+                           (currentHour < closingHour || (currentHour === closingHour && currentMinute < closingMinute));
+
+            if (isOpen) {
+                statusCircle.classList.add('open');
+                statusText.textContent = 'Abierto';
+            } else {
+                statusCircle.classList.add('closed');
+                statusText.textContent = 'Cerrado';
+            }
+        }
+
+        checkStoreStatus();
+
+        // Comprobar el estado cada minuto
+        setInterval(checkStoreStatus, 60000); // 60000 milisegundos = 1 minuto
+    </script>
+</body>
+</html>

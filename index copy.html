@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="assets/css/intro.css">
 
   <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,62 +80,7 @@
       top: 5px;
       z-index: 100;
     }
-
-    /* animacion de abierto */
-
-    .status-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      border-radius: 6px;
-      background-color: #f0f0f0;
-      border: none;
-      color: #333;
-      font-size: 14px;
-      cursor: pointer;
-      overflow: hidden;
-    }
-
-    .status-circle {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        margin-right: 10px;
-    }
-
-    .open {
-        background-color: green;
-    }
-
-    .closed {
-        background-color: red;
-    }
-
-    /* Efecto de desvanecimiento y expansión hacia afuera */
-    @keyframes expandFade {
-        0% {
-            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
-        }
-        100% {
-            box-shadow: 0 0 0px 10px rgba(0, 255, 0, 0);
-        }
-    }
-
-    /* Aplicar la animación al botón */
-    .status-button {
-        animation: expandFade 2s infinite;
-    }
-
   </style>
-
-<button id="statusButton" class="status-button">
-  <span id="statusCircle" class="status-circle"></span>
-  <span id="statusText">Cargando...</span>
-</button>
-
   <header class="bg-gradient-dark">
     <div class="page-header min-vh-50"
       style="background-image: url(&quot;assets/img/product/perro1.jpg&quot;); background-position-y: 50%; background-size: cover; background-position-x: 70%;">
@@ -235,7 +181,7 @@
       <div class="row" id="jugos"></div>
 
 
-      <div class="position-fixed" style="left: 5px; bottom: -13px; z-index: 9999;">
+      <div class="position-fixed" style="left: 10px; bottom: 3px; z-index: 9999;">
         <a onclick="contacto('Hola...')" class="text-sm text-white" style="cursor: pointer;">
           <button type="button" class="btn btn-sm pt-0 pb-0 px-0">
             <img class="icon-md" src="images/Whatsapp.png" alt="">
@@ -244,7 +190,7 @@
           
       </div>
 
-      <div class="position-fixed " style="right: 5px; bottom: -10px; z-index: 9999;">
+      <div class="position-fixed " style="right: 10px; bottom: 10px; z-index: 9999;">
         <button type="button" class="btn btn-sm pt-0 pb-0 px-2 border border-white btn-warning" id="openModal1">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="35" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
           <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"></path>
@@ -472,21 +418,19 @@
           <h5 class="text-edo text-warning">Contacto</h5>
             <ul class="flex-column nav">
               <li class="nav-item text-white">
-                📌 Don Carmelo calle 50 #28 - 07 <br>
+                📌Urb. Casa Carmelo 🍎 B 🏠 12 <br>
 
                 <p class="text-edo mb-4 text-sm text-white ">
                   
-                  <span class="bg-white text-dark px-1 mt-1 card col-lg-8 col-sm-8 col-6 mx-auto">cocina oculta <br> Solo domicilios</span>
+                  <span class="bg-white text-dark px-1 mt-1 card col-lg-8 col-sm-8 mx-auto">cocina oculta <br> Solo domicilios</span>
                 </p>
               </li>
             </ul>
         </div>
 
-        <div class="col-10 mx-auto col-md-12 mb-4 pt-1 border-top border-white text-center">
-          
-            <p>&copy; 2024 <a onclick="sebastian('👨‍💻 Hola, Quiero cotizar una pagina web para mi negocio ☺')"
-              class="text-sm link-warning " style="cursor: pointer;">Ing. Sebastian Pitre. </a> Todos los derechos reservados.</p>
-            <p class="mt-n3">Prohibida la reproducción total o parcial de este sitio web sin autorización.</p>
+        <div class="col-12 my-2 pt-1 border-top border-white text-center">
+          <a onclick="sebastian('👨‍💻 Hola, Quiero cotizar una pagina web para mi negocio ☺')"
+            class="text-sm text-white" style="cursor: pointer;">Sistema creado por <span class="link-warning">Ing. Sebastian Pitre.</span> </a>
         </div>
       </div>
     </div>
