@@ -572,9 +572,9 @@ function finalizarCompra() {
 function checkStoreStatus() {
     
     const openingHour = 17;  // 17:30 (5:30 PM)
-    const openingMinute = 30;
-    const closingHour = 23;  // 23:30 (11:30 PM)
-    const closingMinute = 30;
+    const openingMinute = 0;
+    const closingHour = 24;  // 23:30 (11:30 PM)
+    const closingMinute = 0;
 
     const now = new Date();
     const currentHour = now.getHours();
